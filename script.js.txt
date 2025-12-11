@@ -1,0 +1,20 @@
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+/* Typing Animation */
+const words = [ "Student"];
+let index = 0;
+
+function typing() {
+  document.getElementById("typed").textContent = words[index];
+  index = (index + 1) % words.length;
+}
+setInterval(typing, 1500);
+
+/* Contact Form */
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("formStatus").textContent = "✔ Message Sent Successfully!";
+  this.reset();
+});
