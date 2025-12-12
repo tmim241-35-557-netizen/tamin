@@ -1,20 +1,24 @@
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+const text = document.querySelector(".type-effect");
+const words = ["Buy", "Sell"];
+let i = 0;
+let count = 0;
+
+function typingEffect() {
+    if (count < words.length) {
+        let currentWord = words[count];
+        let letter = currentWord.slice(0, ++i);
+        text.textContent = letter;
+
+        if (letter.length === currentWord.length) {
+            count++;
+            i = 0;
+            if (count === 2) return; // stop after 2 words
+            setTimeout(typingEffect, 800);
+        } else {
+            setTimeout(typingEffect, 100);
+        }
+    }
 }
 
-/* Typing Animation */
-const words = [ "Student"];
-let index = 0;
-
-function typing() {
-  document.getElementById("typed").textContent = words[index];
-  index = (index + 1) % words.length;
-}
-setInterval(typing, 1500);
-
-/* Contact Form */
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  document.getElementById("formStatus").textContent = "✔ Message Sent Successfully!";
-  this.reset();
-});
+typingEffect();
