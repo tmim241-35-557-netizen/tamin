@@ -1,4 +1,4 @@
-/* GENERAL RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,6 @@ body {
     color: #fff;
 }
 
-/* HEADER */
 header {
     width: 100%;
     padding: 20px 5%;
@@ -40,7 +39,6 @@ nav a.active {
     color: #ff4b4b;
 }
 
-/* HERO SECTION */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -74,7 +72,6 @@ nav a.active {
     line-height: 1.7;
 }
 
-/* BUTTONS */
 .btn {
     padding: 12px 25px;
     background: #ff4b4b;
@@ -104,7 +101,6 @@ nav a.active {
     color: #000;
 }
 
-/* HERO IMAGE */
 .hero-img img {
     width: 380px;
     height: auto;
@@ -113,7 +109,6 @@ nav a.active {
     box-shadow: 0 0 40px #ff000044;
 }
 
-/* SECTIONS */
 .section {
     padding: 60px 5%;
     text-align: center;
