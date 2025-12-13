@@ -13,7 +13,7 @@ function typingEffect() {
         if (letter.length === currentWord.length) {
             count++;
             i = 0;
-            if (count === 2) return; // stop after 2 words
+            if (count === 2) return; 
             setTimeout(typingEffect, 800);
         } else {
             setTimeout(typingEffect, 100);
